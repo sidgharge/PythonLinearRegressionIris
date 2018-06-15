@@ -8,7 +8,7 @@ r = reg(0.01, 10000, data[:, 3], data[:, 2])
 
 res = r.start_training()
 
-print(res)
+print(1 - r.cost)
 
 accuracy = r.check_accuracy()
 
