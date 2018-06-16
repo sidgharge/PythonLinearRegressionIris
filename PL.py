@@ -13,3 +13,5 @@ w = np.zeros((x.shape[0], 1), dtype=float)
 
 r = reg(0.01, 10000, x, y)
 print(r.start_training())
+
+print(r.check_accuracy())

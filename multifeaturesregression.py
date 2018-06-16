@@ -46,3 +46,12 @@ class MultiFeaturesRegression:
 
             self.update_b()
         return self.w, self.b
+
+    def predict_y(self, x):
+        return self.w * x + self.b
+
+    def check_accuracy(self):
+        accuracy = 0
+        y_pred = np.matmul(np.transpose(self.w), self.xs_training) + self.b
+        accuracy = abs(self.ys_training - y_pred) / y_pred
+        return 1 - np.sum(accuracy) / accuracy.shape[1]
